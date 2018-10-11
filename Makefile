@@ -1,11 +1,11 @@
 # include directories
-INCLUDES = -I. -I./include/ -I/usr/local/include
+INCLUDES = -I. -I./include/ -I/usr/local/include -I/home/ester/virenv/py2/lib/python2.7/site-packages/synthlisa/ -I/home/ester/virenv/py2/bin/gsl/include/gsl/ -I/home/ester/git/synthlisa/lisasim/GSL/
 
 # C++ compiler flags (-g -O2 -Wall)
-CCFLAGS = -g -O2 -Wall
+CCFLAGS = -g -O2 -Wall -I/home/ester/virenv/py2/bin/gsl/include/gsl/
 
-# library paths
-LIBS = -L/usr/local/lib -lgsl -lgslcblas -lm 
+# library paths -L/usr/local/lib 
+LIBS = -L/home/ester/virenv/py2/lib/ -lgsl -lgslcblas -lm 
 
 
 all: lib_code Lisa TDI
